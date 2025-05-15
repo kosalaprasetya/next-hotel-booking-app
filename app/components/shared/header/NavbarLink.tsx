@@ -19,7 +19,7 @@ const NavbarLink = () => {
   return (
     <>
       <button
-        className="inline-flex items-center justify-center rounded-md p-2 text-sm text-gray-500 hover:bg-gray-100 md:hidden"
+        className="inline-flex cursor-pointer items-center justify-center rounded-md p-2 text-sm text-gray-500 hover:bg-gray-100 lg:hidden"
         onClick={() => setOpen(!open)}
       >
         {open ? (
@@ -29,22 +29,22 @@ const NavbarLink = () => {
         )}
       </button>
       <nav
-        className={clsx("w-full transition-all md:block md:w-auto", {
+        className={clsx("w-full transition-all lg:block lg:w-auto", {
           hidden: !open,
         })}
       >
-        <ul className="mt-4 flex flex-col rounded-sm bg-gray-50 p-4 text-xs font-semibold uppercase md:mt-0 md:flex-row md:items-center md:gap-10 md:border-0 md:bg-white md:p-0">
+        <ul className="mt-4 flex flex-col rounded-sm bg-gray-50 p-4 text-xs font-semibold uppercase lg:mt-0 lg:flex-row lg:items-center lg:gap-10 lg:border-0 lg:bg-white lg:p-0">
           {menuList.map((menu, index) => (
             <li key={index}>
               <Link
                 href={menu.link}
-                className="block rounded-sm px-3 py-2 hover:bg-gray-100 md:p-0 md:hover:bg-transparent"
+                className="block rounded-sm px-3 py-2 hover:bg-gray-100 lg:p-0 lg:hover:bg-transparent"
               >
                 {menu.name}
               </Link>
             </li>
           ))}
-          <li className="pt-4 md:pt-0">
+          <li className="pt-4 lg:pt-0">
             <Link
               href="/login"
               className="rounded-sm bg-orange-400 px-6 py-3 text-white hover:bg-orange-500"
